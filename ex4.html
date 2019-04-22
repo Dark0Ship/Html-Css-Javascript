@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>연습4 시발시발</title>
+</head>
+<body>
+   <script type="text/javascript">
+    /* 추가 정보가 필요한 함수의 선언*/   
+    function getArea(width, height){
+        return width * height;
+    }
+    var a = prompt('width');
+    var b = prompt('height');
+    alert(getArea(a, b));
+    
+    /* 함수로부터 단일값 전달받기*/
+    function calculateArea(width, height) {
+        var area = width * height;
+        return area;
+    }
+       var wallOne = calculateArea(3, 5);
+       var wallTwo = calculateArea(8, 5);
+       alert(wallOne);
+       alert(wallTwo);
+    /* 함수로부터 여러 값 전달받기*/
+    function getSize(width, height, depth) {
+        var area =  width * height;
+        var volume = width * height * depth;
+        var sizes = [area, volume];
+        return sizes;
+    }
+    
+       var areaOne = getSize(3, 2, 3)[0];
+       var volumeOne = getSize(3, 2, 3)[1];
+       alert(areaOne);
+       alert(volumeOne);
+       
+    </script>
+    
+</body>
+</html>
