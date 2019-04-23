@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>생상저 표기법을 이용하여 여러 객체 생성하기</title>
+</head>
+<body>
+  <script type="text/javascript">
+   function Hotel(name, rooms, booked){
+   
+   this.name = name;
+   this.rooms = rooms;
+   this.booked = booked;
+   
+   this.checkAvailabilty = function(){
+       return this.rooms - this.booked;
+    }
+   }
+   var quayHotel = new Hotel('Quay', 40, 25);
+   var parkHotel = new Hotel('Park', 120, 77);
+   alert(quayHotel.name);
+   alert(quayHotel.rooms);
+   alert(quayHotel.booked);
+   alert(parkHotel.name);
+   alert(parkHotel.rooms);
+   alert(parkHotel.booked);
+  </script>
+      
+    
+</body>
+</html>
